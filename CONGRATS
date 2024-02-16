@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message for Bayot Ariane</title>
+    <style>
+        body {
+            background-color: #f6f6f6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ff0066;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff0066;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff0044;
+        }
+        .flower {
+            display: none;
+            margin-top: 20px;
+        }
+        #message {
+            display: none;
+            color: #ff0066;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        #entertainment {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Congrats Ariane Bayot!</h1>
+        <p>Pindotang ubos inamoka!</p>
+        <button id="clickButton">Click kung mixed signal enjoyer ka</button>
+        <div class="flower" id="flower">
+            <img src="https://media.giphy.com/media/5bVJrF9a7Qo4s/giphy.gif" alt="Flower animation">
+        </div>
+        <div id="entertainment">
+            <p>Preparing a special surprise for you...</p>
+            <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Entertainment animation">
+        </div>
+        <p id="message">Congrats mao rato!</p>
+    </div>
+
+    <script>
+        const button = document.getElementById('clickButton');
+        const flower = document.getElementById('flower');
+        const message = document.getElementById('message');
+        const entertainment = document.getElementById('entertainment');
+
+        button.addEventListener('click', () => {
+            flower.style.display = 'block';
+            setTimeout(() => {
+                flower.style.display = 'none';
+                entertainment.style.display = 'block';
+                setTimeout(() => {
+                    entertainment.style.display = 'none';
+                    message.style.display = 'block';
+                }, 3000); // 3 seconds
+            }, 3000); // 3 seconds
+        });
+    </script>
+</body>
+</html>
